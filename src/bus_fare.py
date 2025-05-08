@@ -44,5 +44,4 @@ def is_peak_hour(dt: datetime) -> bool:
     - Morning: 07:00–09:00
     - Evening: 16:00–18:00
     """
-    hour = dt.hour
-    return (7 <= hour < 9) or (16 <= hour < 18)
+    return (7 <= dt.hour < 9) or (16 <= dt.hour < 18)
