@@ -20,7 +20,10 @@ def bus_ticket_price(age: int, ride_datetime: datetime, ride_duration: int, is_p
     # TODO: Weekend flat rate
     weekday = ride_datetime.weekday()
     if weekday >= 5:  # Saturday or Sunday
-        return 0.0 if age < 2 else 2.0
+        if(age < 2):
+            return 0.0
+        else:
+            return 2.0
 
     # TODO: Short trip under 5 minutes during off-peak (non-weekend)
     if ride_duration < 5 and not is_peak_hour(ride_datetime):
