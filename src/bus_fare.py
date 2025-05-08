@@ -12,6 +12,7 @@ def bus_ticket_price(age: int, ride_datetime: datetime, ride_duration: int, is_p
     # TODO: Public holiday overrides all
     if is_public_holiday:
         return 2.0
+    
 
     # TODO: Free for children under 2
     if age < 2:
